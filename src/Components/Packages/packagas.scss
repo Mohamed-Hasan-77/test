@@ -1,0 +1,121 @@
+.packages {
+    background-color: rgb(233, 236, 239);
+
+
+
+    .sectionTitle {
+        h2 {
+            font-size: clamp(1.9375rem, 1.7138rem + 0.994vw, 2.5625rem);
+            margin-bottom: 3rem;
+        }
+    }
+
+
+
+    .packagesCards {
+
+
+
+        .card {
+
+            position: relative;
+            height: 1320px;
+
+
+            h3 {
+                font-size: 27px;
+                height: 120px;
+            }
+
+            .price {
+                letter-spacing: 3px;
+            }
+
+            .btn {
+                margin-top: 15px;
+            }
+
+            .seperator {
+                height: 1px;
+                background-color: #00000059;
+                margin-top: 30px;
+            }
+
+            .bottomCard {
+                position: absolute;
+                width: 95%;
+                bottom: 15px;
+            }
+
+            ul {
+                margin-top: 40px;
+
+                li {
+                    font-size: 18px;
+                    padding-bottom: 0;
+                    display: flex;
+                    align-items: start;
+                    gap: 12px;
+                    color: #000000d5;
+                    margin-bottom: 1.5rem;
+
+
+                    &::before {
+                        content: "";
+                        background: url("../../assets/تنزيل\ \(1\).svg") no-repeat center center;
+                        width: 20px;
+                        height: 20px;
+                        color: black;
+                    }
+                }
+
+
+            }
+
+
+
+            &:hover {
+                box-shadow: 0 0 32px #171717;
+                transform: translateY(-5px) scale(1.02);
+
+            }
+        }
+
+
+        .midCard {
+            background: linear-gradient(180deg, #1c1c1c, #424243) !important;
+            color: white;
+
+
+            ul {
+                li {
+                    color: white;
+                }
+            }
+
+            .seperator {
+
+                background-color: #5a5a5ad3;
+
+            }
+        }
+
+
+
+        @media (max-width:992px) {
+            .card {
+                border-radius: 0.75rem !important;
+                height: auto;
+
+
+                .bottomCard {
+                    position: unset;
+                    width: 100%;
+
+                }
+            }
+        }
+    }
+
+
+}
