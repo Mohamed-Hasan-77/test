@@ -15,7 +15,7 @@ export default function FAQ() {
     
             <div className="flex justify-between items-center flex-wrap  ">
 
-                <div className="text w-full lg:w-1/2 ">
+                <div className="text w-full lg:w-1/2 mt-20 lg:mt-0 ">
 
                 <div className="m-2 space-y-5">
 
