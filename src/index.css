@@ -2,14 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 :root {}
 
 html {
-  font-family: "Lato", sans-serif;
+  /* font-family: "Lato", sans-serif; */
+  /* font-family: "Montserrat", sans-serif; */
+  /* font-family: "Josefin Sans", sans-serif; */
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+
   overflow-x: hidden;
   background-color: rgb(233, 236, 239);
 
@@ -37,9 +42,9 @@ html {
 .under-line::after {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -10px;
   left: 0;
-  height: 5px;
-  width: 60%;
+  height: 4px;
+  width: 50%;
   background-color: #b79662;
 }

@@ -6,7 +6,7 @@ import "./packagas.scss"
 
 export default function Packages() {
   return (
-    <div className="packages pb-60">
+    <div className="packages pb-24">
         
     <div className="container">
     <div className="sectionTitle  text-center my-16   ">

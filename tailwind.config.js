@@ -9,12 +9,16 @@ export default {
       colors: {
         transparent: 'transparent',
         mainColor: '#b79662',
+        mainColorLight: 'rgba(196,160,93,1)',
+
+
       },
       boxShadow: {
         inputFocus: '0 0 0 0.25rem rgba(255,204,0,.30)'
       },
       backgroundImage: {
         mainLinearColor: 'linear-gradient(to right,rgba(235,198,132,1),rgba(196,160,93,1))',
+        mainLinearColorTwo: 'linear-gradient(to bottom, rgba(235, 198, 132, 1), rgba(196, 160, 93, 1)) ',
       },
       container: {
         center: true,

@@ -1,0 +1,91 @@
+.reviews {
+
+    padding: 100px 0;
+    background-color: white;
+    overflow: hidden;
+
+
+    .secTitle {
+        p {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        h2 {
+            font-size: clamp(1.625rem, 1.2889rem + 1.4151vw, 2.5625rem);
+            line-height: 1.25;
+
+            .under-linee {
+                position: relative;
+
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    bottom: -15px;
+                    left: 50%;
+                    height: 4px;
+                    width: 60%;
+                    background-color: #b79662;
+                }
+
+            }
+        }
+
+        svg {
+            width: 70px;
+            height: 55px;
+        }
+
+    }
+
+    .slick-list {
+        overflow: visible;
+    }
+
+
+    .sliderOBox {
+
+        .sliderInnerBox {
+            min-height: 300px;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+            align-items: center;
+            justify-content: center;
+
+            .title {
+                font-weight: bold;
+
+                span {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 50%;
+                    margin-right: 8px;
+                    color: white;
+                    font-size: 13px;
+
+                }
+            }
+
+
+            p {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                font-weight: 200;
+                font-size: clamp(0.875rem, 0.7406rem + 0.566vw, 1.25rem);
+                font-weight: 100;
+            }
+
+            svg {
+                margin-top: 20px;
+                width: 28px;
+                height: 28px;
+            }
+
+        }
+
+    }
+
+
+}
