@@ -20,6 +20,10 @@ html {
 
 }
 
+body {
+  position: relative;
+}
+
 
 
 
@@ -47,4 +51,74 @@ html {
   height: 4px;
   width: 50%;
   background-color: #b79662;
+}
+
+
+.contactPhone .phoneClick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: #d7b15f;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.5s;
+  position: relative;
+
+}
+
+.contactPhone .phoneClick::after {
+  content: "";
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  border: 1px solid #d7b15f;
+  height: 60px;
+  transform-origin: center center;
+  box-sizing: border-box;
+  z-index: 9;
+  transition: 0.5s;
+  animation: BorderAnim 3s -0.5s linear infinite;
+}
+
+
+.contactPhone ul {
+  transition: all 0.5s linear;
+}
+
+.contactPhone li {
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  background-color: #d7b15f;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.5s;
+
+}
+
+
+.contactPhone .phoneClick:hover,
+.contactPhone li:hover {
+  background-color: white;
+}
+
+
+@keyframes BorderAnim {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+
+  50% {
+    transform: scaleX(1.4) scaleY(1.4);
+  }
+
+  100% {
+    transform: scaleX(1.8) scaleY(1.8);
+    opacity: 0;
+  }
 }
