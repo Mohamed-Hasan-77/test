@@ -43,7 +43,7 @@ function App() {
       </div>
 
 
-      <div className="contactPhone fixed  bottom-7 right-2 flex flex-col justify-center space-y-5">
+      <div className="contactPhone fixed  bottom-7 right-5 flex flex-col justify-center space-y-5">
           
               <ul  className={`flBtn-first ${phoneClick == false ? "opacity-0" : "opacity-1" } `}> 
                   <li>
