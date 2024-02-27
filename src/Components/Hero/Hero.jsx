@@ -79,7 +79,9 @@ export default function Hero() {
 
             </form>
 
-        </div>
+            </div>
+
+            
         </div>
 
         </div>

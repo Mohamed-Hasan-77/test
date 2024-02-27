@@ -9,6 +9,7 @@ import UAEDifferent from './Components/UAEDifferent/UAEDifferent'
 import StartYourJourney from './Components/StartYourJourney/StartYourJourney'
 import Reviews from './Components/Reviews/Reviews'
 import FAQ from './Components/FAQ/FAQ'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -24,6 +25,11 @@ function App() {
       <BankPartners/>
       <Reviews/>
       <FAQ/>
+      <Footer/>
+
+      <div className="whatsapp">
+        <img src="" alt="" />
+      </div>
     </>
   )
 }

@@ -56,7 +56,7 @@ export default function BankPartners() {
 
                 </div>
                 <div className="btn w-full ">
-                        <button className="px-7 py-2.5 rounded-full bg-mainLinearColor text-2xl my-12 "> 
+                        <button className=" px-3 lg:px-7 py-2.5 rounded-full bg-mainLinearColor text-lg lg:text-2xl my-12 "> 
                             <a href="#" className="fw-light "> Contact Us </a>
                         </button>
                     </div>

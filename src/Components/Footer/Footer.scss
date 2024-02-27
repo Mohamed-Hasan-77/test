@@ -1,0 +1,25 @@
+#footer {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.722), rgb(0 0 0 / 80%)),
+        url('../../assets/footer.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+
+
+    .footerBottom {
+        background-color: #212529;
+        color: white;
+        font-size: 9px;
+        word-spacing: 4px;
+
+        .imgs {
+            img {
+                width: 55px;
+                height: 28px;
+                background: white;
+            }
+        }
+    }
+}

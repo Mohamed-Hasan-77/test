@@ -36,13 +36,18 @@
             margin: 30px 0;
         }
 
-        p {
+        .drop {
             font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 18px;
             line-height: 1.5;
             font-weight: 100;
             position: relative;
             z-index: 5;
+
+            ul {
+                list-style: disc;
+                padding-left: 30px;
+            }
         }
     }
 
@@ -60,6 +65,11 @@
             box-shadow: 0 15px 20px -3px rgb(17 16 16 / 37%);
             padding: 35px 40px;
             color: #212529;
+
+            @media (min-width: 992px) {
+                min-height: 250px;
+                max-height: 250px;
+            }
         }
 
         h3 {
