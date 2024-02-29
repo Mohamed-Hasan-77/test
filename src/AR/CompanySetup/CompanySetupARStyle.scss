@@ -1,0 +1,23 @@
+.CompanySetup {
+
+    padding: 80px 0 100px;
+    background-color: #F5F5F5;
+
+    .title {
+        h2 {
+            font-size: clamp(2rem, 1.7763rem + 0.994vw, 2.625rem);
+            font-weight: 500;
+        }
+
+        p {
+            font-size: clamp(1.0625rem, 0.973rem + 0.3976vw, 1.3125rem);
+        }
+    }
+
+
+    .optBox {
+        svg {
+            filter: invert(1);
+        }
+    }
+}

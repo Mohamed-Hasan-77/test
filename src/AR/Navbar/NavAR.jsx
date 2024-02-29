@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
 import myImage from "../../assets/logosmarketing-T1-CEl9BVmk.png"
-import "./navStyle.scss"
+import "./navStyleAR.scss"
 
 
-export default function Nav() {
+export default function NavAR() {
 
 
     return (
-    <div className="navBar py-2 ">
+    <div className="navBarAr py-2 ">
         <div className="container flex  justify-between">
 
         
@@ -16,8 +16,8 @@ export default function Nav() {
         </div>
 
         <div className="navright flex items-center ">
-            <div className="btn mr-8">
-                <button className=" position-relative  bg-mainBackColor fw-bold  py-2 px-3  rounded-full outline-none text-white"> COST CALCULATOR </button>
+            <div className="btn ml-8">
+                <button className=" position-relative  bg-mainBackColor fw-bold  py-2 px-3  rounded-full outline-none text-white"> حاسبة التكلفة </button>
             </div>
 
             <a  href=" https://wa.me/+971557480115" >
@@ -32,7 +32,7 @@ export default function Nav() {
                 <a  href="tel:+971557480115" title="Call Us - +971557480115">+971557480115</a>
             </div>
             <div className="lang ml-3 border p-2 flex justify-center items-center  rounded bg-mainBackColor ">
-                <Link to={"./AR"} className="text-xl text-white"> عربي </Link>
+                <Link to={"/"}  className="text-xl text-white"> EN </Link>
             </div>
 
         </div>

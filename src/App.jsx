@@ -14,11 +14,13 @@ import {
   createBrowserRouter,
   RouterProvider} from "react-router-dom";
 import Home from './Components/Home/Home'
-import Layout from './Components/Layout/Layout'
+import Layout from './Components/Layout/LayoutAR'
 import Privacy from './Components/Privacy/Privacy'
 import TermsAndConditions from './Components/TermsAndConditions/TermsAndConditions'
 import CookiesPolicy from './Components/CookiesPolicy/CookiesPolicy'
 import NotFound from './Components/NotFound/NotFound'
+import PrivacyAR from './Components/PrivacyAR/PrivacyAR'
+import HomeAR from './AR/Home/HomeAR'
 
 
 // s
@@ -30,7 +32,10 @@ const router = createBrowserRouter([
     {element: <Home/>, path: '/'},
     {element: <Home/>, path: 'home'},
   ]},
+  {element: <HomeAR/>, path: '/Ar'},
+  {element: <HomeAR/>, path: 'homeAR'},
   {element: <Privacy/>, path: 'PrivacyPolicy'},
+  {element: <PrivacyAR/>, path: 'PrivacyPolicyAr'},
   {element: <TermsAndConditions/>, path: 'TermsAndConditions'},
   {element: <CookiesPolicy/>, path: 'CookiesPolicy'},
   {
@@ -56,7 +61,7 @@ function App() {
     <>
 
 
-<RouterProvider router={router}/>
+  <RouterProvider router={router}/>
 
 
       <div className={`requestCallback   ${requestCallBack == false ? "invisible opacity-0 hidden "  :  "visible opacity-1 flex"  } `}>

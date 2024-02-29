@@ -1,0 +1,88 @@
+.faqs {
+
+
+    padding: 70px 0 200px;
+    background-color: white;
+
+    .title {
+        h2 {
+            font-size: clamp(1.625rem, 1.2889rem + 1.4151vw, 2.5625rem);
+            line-height: 1.25;
+            position: relative;
+            width: fit-content;
+
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                height: 4px;
+                width: 80%;
+                background: linear-gradient(-90deg, #912583, #e94057, #f27022);
+            }
+
+        }
+    }
+
+
+    .text {
+        position: relative;
+        z-index: 5;
+
+        h3 {
+            font-size: 34px;
+            margin: 30px 0;
+        }
+
+        .drop {
+            font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: 100;
+            position: relative;
+            z-index: 5;
+
+            ul {
+                list-style: disc;
+                padding-left: 30px;
+            }
+        }
+    }
+
+
+    .group {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+
+    }
+
+
+
+
+    .achieveBoxes {
+        .innerAbox {
+            box-shadow: 0 15px 20px -3px rgb(17 16 16 / 37%);
+            padding: 35px 40px;
+            color: #212529;
+
+            @media (min-width: 992px) {
+                min-height: 250px;
+                max-height: 250px;
+            }
+        }
+
+        h3 {
+            font-size: clamp(1.625rem, 1.2889rem + 1.4151vw, 2.5625rem);
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+
+        p {
+            font-size: clamp(1rem, 0.9552rem + 0.1887vw, 1.125rem);
+            text-align: center;
+            color: white;
+        }
+    }
+}

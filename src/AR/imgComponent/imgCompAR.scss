@@ -1,0 +1,19 @@
+.img {
+
+    position: relative;
+    text-align: center;
+    overflow: visible;
+
+
+    .myImg {
+        // width: 460px;
+        height: 440px;
+        filter: grayscale(1);
+    }
+
+    svg {
+        position: absolute;
+        z-index: 0;
+
+    }
+}

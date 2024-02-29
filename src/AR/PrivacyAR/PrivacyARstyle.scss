@@ -1,5 +1,14 @@
-#CookiesPolicy {
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
+
+
+#privacyAR {
+    direction: rtl;
     background-color: #111010;
+
+
+    font-family: "El Messiri", sans-serif;
+
+
 
     .navBar {
         border-bottom: 1px solid #575757;
@@ -30,7 +39,7 @@
                     &::before {
                         content: "";
                         position: absolute;
-                        left: -15px;
+                        right: -15px;
                         top: 5px;
                         width: 8px;
                         height: 8px;
@@ -50,15 +59,8 @@
         background-color: #111010;
 
         p {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             font-weight: 300;
             font-size: clamp(1.125rem, 0.9458rem + 0.7547vw, 1.625rem);
-        }
-    }
-
-    #text {
-        h2 {
-            font-size: 2rem;
         }
     }
 }

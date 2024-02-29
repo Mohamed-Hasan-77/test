@@ -1,0 +1,117 @@
+#policyFooter {
+    background-color: #161515;
+
+    .policyTitle {
+        h2 {
+            font-size: clamp(2.25rem, 1.9139rem + 1.4151vw, 3.1875rem);
+
+        }
+
+        .fisrtP {
+            font-size: clamp(1.3125rem, 1.2453rem + 0.283vw, 1.5rem);
+        }
+    }
+
+    .contact {
+        font-size: 16px;
+    }
+
+
+
+
+    .tips {
+
+        background-image: linear-gradient(to bottom, rgb(0 0 0 / 0%), rgb(0 0 0)), url("../../assets/footer-bg-bussiness-tips.webp");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+
+        h2 {
+            font-size: clamp(1.4375rem, 0.5861rem + 3.5849vw, 3.8125rem);
+            text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+            font-weight: bold;
+        }
+
+        .subscribe {
+
+            p {
+                font-size: clamp(0.9375rem, 0.8031rem + 0.566vw, 1.3125rem);
+            }
+
+            .btn {
+                margin-top: 20px;
+                display: flex;
+
+                input {
+                    width: 70%;
+                    padding: 10px 20px;
+                    border-radius: 50px 0 0 50px;
+                    border: 1px solid white;
+                    background-color: black;
+                    font-size: 14px;
+                }
+
+                button {
+                    padding: 7px 15px;
+                    border-radius: 0px 50px 50px 0px;
+                    width: 30%;
+                    transition: all 0.3s;
+
+                    &:hover {
+                        background-color: black;
+                        // outline: 1px solid white;
+                        transform: scale(0.98);
+
+                    }
+                }
+
+            }
+
+            .Conditions {
+                font-size: 10px;
+                word-spacing: 2px;
+                margin-top: 15px;
+                // letter-spacing: 1px;
+
+            }
+        }
+    }
+
+
+
+
+
+    .footerBottom {
+        background-color: #212529;
+        color: white;
+        font-size: 9px;
+        // word-spacing: px;
+
+        .imgs {
+            img {
+                width: 55px;
+                height: 28px;
+                background: white;
+            }
+        }
+    }
+
+
+    .footer {
+        h3 {
+            img {
+                width: 70px;
+            }
+
+
+        }
+
+
+        .reachUs {
+            font-size: 18px;
+        }
+    }
+
+
+}
