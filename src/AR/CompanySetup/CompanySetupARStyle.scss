@@ -1,12 +1,16 @@
-.CompanySetup {
+.CompanySetupAR {
 
     padding: 80px 0 100px;
     background-color: #F5F5F5;
+    direction: rtl;
+    font-family: "El Messiri", sans-serif;
+
 
     .title {
         h2 {
             font-size: clamp(2rem, 1.7763rem + 0.994vw, 2.625rem);
             font-weight: 500;
+            line-height: 2;
         }
 
         p {

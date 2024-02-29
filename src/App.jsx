@@ -79,7 +79,7 @@ function App() {
                             <div className="logo flex justify-center mb-3">
                               <img  src={logoImg} className='w-24'  alt="logo"/>
                             </div>
-                            <p className="  text-xl w-full text-center">We offer licences that support </p>
+                            <p className="  text-xl w-full text-center">We offer licences that support  </p>
                             <p className="  text-xl w-full text-center"> your business in UAE </p>
                             <p className="my-5  text-xl w-full text-center"> Get a Call-Back in 50 seconds </p>
                           </div>

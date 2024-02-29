@@ -15,11 +15,11 @@ import partnerImg12 from "../../assets/sliderImages/ifza-colored.png"
 
 export default function PartnersCarouselAR() {
   return (
-    <div className='Partners '>
+    <div className='PartnersAR '>
 
 
     <div className="secTitle text-center">
-        <h2> Our <span className="under-linee" > Official </span> Partners </h2>
+        <h2> <span className="under-linee" > شركاؤنا الرسميون </span> </h2>
     </div>
 
 

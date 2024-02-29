@@ -30,9 +30,9 @@ return (
                 <a  href="tel:+971557480115" title="Call Us - +971557480115">+971557480115</a>
             </div>
 
-            <div className="lang ml-3 border p-2 flex justify-center items-center  rounded bg-mainBackColor ">
+            {/* <div className="lang ml-3 border p-2 flex justify-center items-center  rounded bg-mainBackColor ">
                 <Link  className="text-xl text-white"> عربي </Link>
-            </div>
+            </div> */}
             
         </div>
         </div>

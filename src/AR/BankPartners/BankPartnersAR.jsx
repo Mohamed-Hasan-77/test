@@ -19,22 +19,24 @@ export default function BankPartnersAR() {
 
 
     return <>
-<div className='bank '>
 
-    
-<h2 className=" block md:hidden w-full  pl-8">
-                    Get Your Corporate Bank Account for your Business with our Banking Partners
+
+        <div className='bankAR '>
+
+
+                <h2 className=" block md:hidden w-full  pl-8">
+                احصل على حسابك البنكي التجاري لعملك مع شركائنا المصرفيين
                 </h2>
 
 
-        <div className="main flex justify-between">
+            <div className="main flex justify-between">
 
         
 
             <div className="left-col w-1/2  px-8 pb-8">
 
-            <h2 className=" hidden md:block w-full  ">
-                    Get Your Corporate Bank Account for your Business with our Banking Partners
+                <h2 className=" hidden md:block w-full  ">
+                احصل على حسابك البنكي التجاري لعملك مع شركائنا المصرفيين
                 </h2>
 
                 <div className="bankImages flex flex-wrap">
@@ -67,7 +69,7 @@ export default function BankPartnersAR() {
                 </div>
                 <div className="btn w-full ">
                         <button onClick={()=> setRequestCallBack(!requestCallBack)} className=" px-3 lg:px-7 py-2.5 rounded-full bg-mainBackColor text-white text-lg lg:text-2xl my-12 "> 
-                            Contact Us 
+                            اتصل بنا 
                         </button>
                     </div>
             </div>
@@ -83,7 +85,11 @@ export default function BankPartnersAR() {
 
 
 
-    <div className={`requestCallback   ${requestCallBack == false ? "invisible opacity-0 hidden "  :  "visible opacity-1 flex"  } `}>
+
+
+
+
+    <div className={`requestCallback   ${requestCallBack == false ? "invisible opacity-0 hidden "  :  "visible opacity-1 flex"  } `}>   
 
 <div className={`requestBox  `}>
 
@@ -131,7 +137,7 @@ export default function BankPartnersAR() {
 
 </div>
 
-</div>
+    </div>
 
     </>
 }

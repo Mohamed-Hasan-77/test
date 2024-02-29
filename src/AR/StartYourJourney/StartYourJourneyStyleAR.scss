@@ -1,4 +1,6 @@
-.StartYourJourney {
+.StartYourJourneyAR {
+    direction: rtl;
+    font-family: "El Messiri", sans-serif;
 
     .text {
         position: relative;
@@ -7,15 +9,16 @@
         h3 {
             font-size: 34px;
             margin: 30px 0;
+            font-weight: bold;
         }
 
         p {
-            font-family: system-ui, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             font-size: 18px;
             line-height: 1.5;
-            font-weight: 100;
+            font-weight: 200;
             position: relative;
             z-index: 5;
+            color: rgb(87 87 87);
         }
     }
 

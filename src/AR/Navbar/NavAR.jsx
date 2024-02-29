@@ -31,8 +31,8 @@ export default function NavAR() {
             <div className="num mt-1 mx-4 hidden lg:block text-white hover:text-white transition-colors duration-200">
                 <a  href="tel:+971557480115" title="Call Us - +971557480115">+971557480115</a>
             </div>
-            <div className="lang ml-3 border p-2 flex justify-center items-center  rounded bg-mainBackColor ">
-                <Link to={"/"}  className="text-xl text-white"> EN </Link>
+            <div className="lang mr-3 border p-2 flex justify-center items-center  rounded bg-mainBackColor ">
+                <Link to={"/"}  className="text-xl text-white "> EN </Link>
             </div>
 
         </div>

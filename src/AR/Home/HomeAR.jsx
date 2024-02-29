@@ -8,6 +8,7 @@ import StartYourJourneyAR from '../StartYourJourney/StartYourJourneyAR'
 import ReviewsAR from '../Reviews/ReviewsAR'
 import FAQAR from '../FAQ/FAQAR'
 import HeroAR from '../Hero/HeroAR'
+import FooterAR from '../Footer/FooterAR'
 
 
 
@@ -24,5 +25,6 @@ return <>
     <BankPartnersAR/>
     <ReviewsAR/>
     <FAQAR/>
+    <FooterAR/>
     </>
 }
