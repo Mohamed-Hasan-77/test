@@ -47,7 +47,7 @@ export default function Hero() {
                     <div className="flex flex-wrap w-1/full md:w-2/3 lg:w-full ">
                         <div className="w-full  mt-5">
 
-                            <h3 className="mb-5 text-mainColor text-2xl w-full text-center"> Get a Call-Back in 50 seconds ! </h3>
+                            <h3 className="mb-5 text-white text-2xl w-full text-center"> Get a Call-Back in 50 seconds ! </h3>
 
                             <label htmlFor="first_name" className="block mb-2 text-white text-sm font-medium text-gray-900 ">Your name (required) </label>
                             <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
@@ -69,7 +69,7 @@ export default function Hero() {
                             <input type="url" id="website" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "   />
                         </div>
 
-                        <button type="submit" className="text-white bg-mainLinearColor w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl"> Call Me !</button>
+                        <button type="submit" className="text-white bg-mainBackColor w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl"> Call Me !</button>
 
 
                         <p className="items-center flex gap-3 mb-0 text-center text-white justify-center mt-8 w-full"><svg width="16" height="16" fill="currentColor" className="bi bi-lock mb-1" viewBox="0 0 16 16"><path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2zM5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1z"></path></svg> 100% Privacy Guaranteed</p>

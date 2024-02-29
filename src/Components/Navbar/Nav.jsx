@@ -1,4 +1,5 @@
-import myImage from "../../assets/smart-zones-uae-business-setup-logo.svg"
+import { Link } from "react-router-dom"
+import myImage from "../../assets/logosmarketing-T1-CEl9BVmk.png"
 import "./navStyle.scss"
 
 
@@ -10,13 +11,13 @@ export default function Nav() {
         <div className="container flex  justify-between">
 
         
-        <div className="logo">
+        <div className="logo flex justify-center items-center">
             <img id="pageLogo" src={myImage}  alt="logo"/>
         </div>
 
         <div className="navright flex items-center ">
             <div className="btn mr-8">
-                <button className=" position-relative  bg-mainLinearColor fw-bold  py-2 px-3  rounded-full outline-none"> COST CALCULATOR </button>
+                <button className=" position-relative  bg-mainBackColor fw-bold  py-2 px-3  rounded-full outline-none text-white"> COST CALCULATOR </button>
             </div>
 
             <a  href=" https://wa.me/+971557480115" >
@@ -27,9 +28,13 @@ export default function Nav() {
 
             </a>
 
-            <div className="num mt-1 mx-4 hidden lg:block text-mainColor hover:text-white transition-colors duration-200">
+            <div className="num mt-1 mx-4 hidden lg:block text-white hover:text-white transition-colors duration-200">
                 <a  href="tel:+971557480115" title="Call Us - +971557480115">+971557480115</a>
-        </div>
+            </div>
+            <div className="lang ml-3 border p-2 flex justify-center items-center  rounded bg-mainBackColor ">
+                <Link  className="text-xl text-white"> عربي </Link>
+            </div>
+
         </div>
         </div>
     </div>

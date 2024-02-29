@@ -5,8 +5,7 @@
 }
 
 #pageLogo {
-    width: 120px;
-    aspect-ratio: auto 120 / 103;
+    width: 75px;
 }
 
 
@@ -37,7 +36,7 @@
             height: 50px;
             top: 0;
             right: 0;
-            background: linear-gradient(90deg, #414142, #B79662, #ebc684, #414142);
+            background: linear-gradient(-90deg, #bd60b1, #e97a89, #efc0a2);
             background-size: 400%;
             border-radius: 40px;
             filter: blur(13px);
@@ -46,7 +45,15 @@
             animation: glow 6s linear infinite;
         }
 
-        @media (max-width: 768px) {
+
+    }
+
+
+    @media (max-width: 768px) {
+
+        .btn {
+            margin-right: 10px;
+
 
             button {
                 font-size: 16px;
@@ -57,12 +64,27 @@
                 height: 64px;
                 top: -7px;
             }
-
-
         }
 
+    }
 
 
+    @media (max-width: 380px) {
+        .btn {
+            margin-right: 10px;
+
+            button {
+                font-size: 12px;
+                padding: 7px;
+            }
+
+            &::before {
+                width: 125px;
+                height: 45px;
+
+            }
+
+        }
     }
 
 
@@ -76,7 +98,18 @@
         font-family: "Teko", sans-serif;
         font-size: 38px;
         letter-spacing: 3px;
+        transition: all 0.3s;
+
+        &:hover {
+            background: linear-gradient(-90deg, #912583, #e94057, #f27022);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
     }
+
+
+
 }
 
 

@@ -6,13 +6,13 @@ import "./packagas.scss"
 
 export default function Packages() {
   return (
-    <div className="packages pb-24">
+    <div className="packages py-14">
         
     <div className="container">
     <div className="sectionTitle  text-center my-16   ">
         <h2 className="my-5  "> Company Setup Packages </h2>
 
-     <p style={{fontSize: "16px"}} className="text-gray-500  w-3/4 mx-auto"> We assess our clients requirements and offer the most practical and cost-effective rates for mainland, offshore, and free zone packages. </p>
+     <p style={{fontSize: "16px"}} className="text-gray-500  w-3/4 mx-auto"> We assess our clients requirements and offer the most practical and cost-effective rates for mainland, offshore, and free packages. </p>
 
         </div>
 
@@ -28,10 +28,10 @@ export default function Packages() {
             </div>
 
 
-                <p className="text-center text-gray-700 mt-10  "> Multiple shareholders permitted </p>
+                <p className="text-center text-gray-400 mt-10  "> Multiple shareholders permitted </p>
 
             <div className="btn text-center  ">
-                <button className="text-center bg-black text-white py-2.5 px-10 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+                <button className="text-center bg-mainBackColor text-white py-2.5 px-10 w-full rounded-2xl text-xl"> APPLY NOW !</button>
             </div>
 
             <div className=" w-full seperator"/>
@@ -52,7 +52,7 @@ export default function Packages() {
             <div className="  w-full seperator"/>
 
                 <div className="btn text-center my-7">
-                        <button className="text-center bg-black text-white py-2.5 px-10 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+                        <button className="text-center bg-mainBackColor text-white py-2.5 px-10 w-full rounded-2xl text-xl"> APPLY NOW !</button>
                     </div>
 
 
@@ -64,9 +64,9 @@ export default function Packages() {
 
   
         <div className="card  midCard w-full lg:w-1/3 mb-10   py-5 px-3 lg:rounded-none rounded-xl  shadow-md hover:scale-105 transition-all duration-500 ">
-            <h3 className=" mt-6 font-bold text-xl md:text-2xl text-center">  JUMP START DUBAI FREEZONE PACKAGES</h3>
+            <h3 className=" mt-6 font-bold text-xl md:text-2xl text-center">  JUMP START DUBAI FREE PACKAGES</h3>
 
-            <div className="price  text-center text-mainColor text-4xl">
+            <div className="price  text-center text-mainBackColor text-4xl">
             <p> AED 21,900 </p>
                 <p className="mt-3 text-lg lg:3xl"> (6,000 USD) </p>
             </div>
@@ -74,7 +74,7 @@ export default function Packages() {
             <p className="text-center text-gray-700 mt-10 opacity-0 "> .... </p>
 
         <div className="btn text-center ">
-            <button className="text-center bg-mainLinearColor text-black py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+            <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
         </div>
 
         <div className="  w-full seperator"/>
@@ -100,7 +100,7 @@ export default function Packages() {
         <div className="  w-full seperator"/>
 
             <div className="btn text-center my-7">
-                    <button className="text-center bg-mainLinearColor text-black py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+                    <button className="text-center bg-mainBackColor  text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
                 </div>
 
 
@@ -118,10 +118,10 @@ export default function Packages() {
             </div>
 
 
-            <p className="text-center text-gray-700 mt-10  "> License with 100% Ownership </p>
+            <p className="text-center text-gray-400 mt-10  "> License with 100% Ownership </p>
 
         <div className="btn text-center">
-            <button className="text-center bg-black text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+            <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
         </div>
 
         <div className="  w-full seperator"/>
@@ -143,7 +143,7 @@ export default function Packages() {
         <div className="  w-full seperator"/>
 
             <div className="btn text-center my-7">
-                    <button className="text-center bg-black text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+                    <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
                 </div>
 
 

@@ -13,4 +13,11 @@
             font-size: clamp(1.0625rem, 0.973rem + 0.3976vw, 1.3125rem);
         }
     }
+
+
+    .optBox {
+        svg {
+            filter: invert(1);
+        }
+    }
 }

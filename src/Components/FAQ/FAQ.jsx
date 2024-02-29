@@ -26,7 +26,7 @@ export default function FAQ() {
 
 
                     <div className="group g1 flex flex-col  bg-white rounded-2xl  shadow-lg   "  tabIndex="1">
-                        <div className="flex cursor-pointer group-focus:bg-mainLinearColorTwo p-3 px-4 items-center  rounded-2xl justify-between">
+                        <div className="flex cursor-pointer group-focus:text-white group-focus:bg-mainBackColor  p-3 px-4 items-center  rounded-2xl justify-between">
                             
                             What is a trade license?
                             <img src={ArrowDown} className="h-4 w-4 transition-all duration-300 group-focus:-rotate-180" />
@@ -48,7 +48,7 @@ export default function FAQ() {
 
 
                     <div className="group g2 flex flex-col  bg-white rounded-2xl  shadow-lg   "  tabIndex="2">
-                        <div className="flex cursor-pointer group-focus:bg-mainLinearColorTwo p-3 px-4 items-center  rounded-2xl justify-between">
+                        <div className="flex cursor-pointer group-focus:text-white group-focus:bg-mainBackColor  p-3 px-4 items-center  rounded-2xl justify-between">
                             
                         What documents do I need to set up my company?
                             <img src={ArrowDown} className="h-4 w-4 transition-all duration-300 group-focus:-rotate-180" />
@@ -72,7 +72,7 @@ export default function FAQ() {
 
 
                     <div className="group g3 flex flex-col  bg-white rounded-2xl  shadow-lg   "  tabIndex="3">
-                        <div className="flex cursor-pointer group-focus:bg-mainLinearColorTwo p-3 px-4 items-center  rounded-2xl justify-between">
+                        <div className="flex cursor-pointer group-focus:text-white group-focus:bg-mainBackColor  p-3 px-4 items-center  rounded-2xl justify-between">
                             
                         How do I start the visa process?
                             <img src={ArrowDown} className="h-4 w-4 transition-all duration-300 group-focus:-rotate-180" />
@@ -99,7 +99,7 @@ export default function FAQ() {
 
 
                     <div className="group g4 flex flex-col  bg-white rounded-2xl  shadow-lg   "  tabIndex="4">
-                        <div className="flex cursor-pointer group-focus:bg-mainLinearColorTwo p-3 px-4 items-center  rounded-2xl justify-between">
+                        <div className="flex cursor-pointer group-focus:text-white group-focus:bg-mainBackColor  p-3 px-4 items-center  rounded-2xl justify-between">
                             
                         What is a free zone?
                             <img src={ArrowDown} className="h-4 w-4 transition-all duration-300 group-focus:-rotate-180" />
@@ -129,7 +129,7 @@ export default function FAQ() {
 
 
                     <div className="group g5 flex flex-col  bg-white rounded-2xl  shadow-lg   "  tabIndex="5">
-                        <div className="flex cursor-pointer group-focus:bg-mainLinearColorTwo p-3 px-4 items-center  rounded-2xl justify-between">
+                        <div className="flex cursor-pointer group-focus:text-white group-focus:bg-mainBackColor  p-3 px-4 items-center  rounded-2xl justify-between">
                             
                         What is the difference between free zone and mainland?
                             <img src={ArrowDown} className="h-4 w-4 transition-all duration-300 group-focus:-rotate-180" />
@@ -156,14 +156,14 @@ export default function FAQ() {
 
 
                     <div className="group g6 flex flex-col  bg-white rounded-2xl  shadow-lg   "  tabIndex="6">
-                        <div className="flex cursor-pointer group-focus:bg-mainLinearColorTwo p-3 px-4 items-center  rounded-2xl justify-between">
+                        <div className="flex cursor-pointer group-focus:text-white group-focus:bg-mainBackColor  p-3 px-4 items-center  rounded-2xl justify-between">
                             
                         How often do I need to renew my trade license?
                             <img src={ArrowDown} className="h-4 w-4 transition-all duration-300 group-focus:-rotate-180" />
 
                         </div>
                             <div className="invisible  text-black h-auto max-h-0 items-center opacity-0 transition-all group-focus:p-5 group-focus:visible group-focus:max-h-screen group-focus:opacity-100 group-focus:duration-300 duration-300" >
-                            A mainland trade license is renewed annually. A free zone license, on the other hand, has a different validity period depending on the free zone authority. This can range from one to five years.
+                            A mainland trade license is renewed annually. A free  license, on the other hand, has a different validity period depending on the free zone authority. This can range from one to five years.
                             </div>
                     </div>
 
@@ -175,7 +175,7 @@ export default function FAQ() {
                 <div className="achieveBoxes w-full lg:w-1/2 flex justify-center items-center flex-wrap py-5 ">
 
                     <div className="aBox py-4  lg:p-4  w-full lg:w-1/2">
-                        <div className="innerAbox rounded-3xl bg-mainLinearColorTwo flex justify-center items-center flex-col space-y-3">
+                        <div className="innerAbox text-white rounded-3xl bg-mainBackColor flex justify-center items-center flex-col space-y-3">
                         <ScrollTrigger duration={10} onEnter={() => setScrollState(true)} >
                         <h3> 
                             {scrollState && 
@@ -189,7 +189,7 @@ export default function FAQ() {
                     </div>
 
                     <div className="aBox py-4  lg:p-4 w-full lg:w-1/2">
-                        <div className="innerAbox rounded-3xl bg-mainLinearColorTwo flex justify-center items-center flex-col space-y-3">
+                        <div className="innerAbox text-white rounded-3xl bg-mainBackColor flex justify-center items-center flex-col space-y-3">
                             {/* <h3> 25,000 + </h3> */}
 
                             <ScrollTrigger  onEnter={() => setScrollState(true)} >
@@ -206,7 +206,7 @@ export default function FAQ() {
                     </div>
 
                     <div className="aBox  py-4  lg:p-4 w-full lg:w-1/2">
-                        <div className="innerAbox rounded-3xl bg-mainLinearColorTwo flex justify-center items-center flex-col space-y-3">
+                        <div className="innerAbox text-white rounded-3xl bg-mainBackColor flex justify-center items-center flex-col space-y-3">
                             {/* <h3> 40,000 + </h3> */}
 
                             <ScrollTrigger  onEnter={() => setScrollState(true)} >
@@ -223,7 +223,7 @@ export default function FAQ() {
                     </div>
 
                     <div className="aBox  py-4  lg:p-4 w-full lg:w-1/2">
-                        <div className="innerAbox rounded-3xl bg-mainLinearColorTwo flex justify-center items-center flex-col space-y-3">
+                        <div className="innerAbox text-white rounded-3xl bg-mainBackColor flex justify-center items-center flex-col space-y-3">
                             {/* <h3> 40   </h3> */}
 
                             <ScrollTrigger  onEnter={() => setScrollState(true)} >
@@ -247,5 +247,5 @@ export default function FAQ() {
 
         </div>   
     </div>
-  )
+)
 }

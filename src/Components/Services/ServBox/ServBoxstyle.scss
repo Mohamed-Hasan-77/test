@@ -1,25 +1,23 @@
 .innerBox {
     padding: 25px;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
-
-
+    text-align: center;
 
     .img {
         width: fit-content;
-        filter: invert(66%) sepia(39%) saturate(408%) hue-rotate(358deg) brightness(87%) contrast(87%);
         padding: 15px;
         border-radius: 50%;
-        border: 1px solid black;
+        border: 1px solid #e94057;
         height: 80px;
         width: 80px;
-
+        margin: 0 auto;
 
         img {
             width: 50px;
         }
-
-
     }
+
+
 
     h3 {
         line-height: 1.2;

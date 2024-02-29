@@ -20,7 +20,7 @@
                 left: 0;
                 height: 4px;
                 width: 80%;
-                background-color: #b79662;
+                background: linear-gradient(-90deg, #912583, #e94057, #f27022);
             }
 
         }
@@ -76,11 +76,13 @@
             font-size: clamp(1.625rem, 1.2889rem + 1.4151vw, 2.5625rem);
             text-align: center;
             font-weight: bold;
+            color: white;
         }
 
         p {
             font-size: clamp(1rem, 0.9552rem + 0.1887vw, 1.125rem);
             text-align: center;
+            color: white;
         }
     }
 }

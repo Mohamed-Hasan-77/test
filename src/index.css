@@ -2,21 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap'); */
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 
 :root {}
 
 html {
-  /* font-family: "Lato", sans-serif; */
-  /* font-family: "Montserrat", sans-serif; */
-  /* font-family: "Josefin Sans", sans-serif; */
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
 
+  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
   overflow-x: hidden;
-  background-color: rgb(233, 236, 239);
+  scroll-behavior: smooth;
 
 }
 
@@ -50,7 +46,7 @@ body {
   left: 0;
   height: 4px;
   width: 50%;
-  background-color: #b79662;
+  background: linear-gradient(-90deg, #912583, #e94057, #f27022);
 }
 
 
@@ -60,7 +56,7 @@ body {
   align-items: center;
   width: 60px;
   height: 60px;
-  background-color: #d7b15f;
+  background: linear-gradient(-90deg, #912583, #e94057, #f27022);
   padding: 10px;
   border-radius: 50%;
   cursor: pointer;
@@ -94,9 +90,10 @@ body {
   width: 50px;
   height: 50px;
   padding: 10px;
-  background-color: #d7b15f;
+  background: linear-gradient(-90deg, #912583, #e94057, #f27022);
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
   transition: background-color 0.5s;
 
 }
@@ -104,7 +101,30 @@ body {
 
 .contactPhone .phoneClick:hover,
 .contactPhone li:hover {
-  background-color: white;
+  background: white;
+}
+
+
+.contactPhone .cllback::before {
+  content: "Request a Callback";
+}
+
+
+.contactPhone .callUs::before {
+  content: "Call Us Now !";
+}
+
+.contactPhone li::before {
+  position: absolute;
+  padding: 2px 30px;
+  background-color: rgba(0, 0, 0, 0.822);
+  color: white;
+  border: 1px solid white;
+  border-radius: 30px;
+  text-align: center;
+  width: max-content;
+  right: 120%;
+  font-size: 15px;
 }
 
 
@@ -121,4 +141,59 @@ body {
     transform: scaleX(1.8) scaleY(1.8);
     opacity: 0;
   }
+}
+
+
+
+.requestCallback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.483);
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+  z-index: 99999999;
+  transition: all 0.5s ease-in-out;
+}
+
+.requestCallback .requestBox {
+  position: relative;
+  padding: 30px;
+  border: 1px solid white;
+  border-radius: 20px;
+  background: rgb(24, 24, 24);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+}
+
+
+.requestCallback .closeRequest {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  filter: invert(1);
+  cursor: pointer;
+}
+
+
+
+
+.textMainColor {
+  background: linear-gradient(-90deg, #912583, #e94057, #f27022);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+.lang {
+  font-weight: bold;
+  font-family: "El Messiri", sans-serif;
 }

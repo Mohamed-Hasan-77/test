@@ -82,8 +82,10 @@
         }
 
 
-        .midCard {
-            background: linear-gradient(180deg, #1c1c1c, #424243) !important;
+        .midCard,
+        .card {
+            background: linear-gradient(180deg, #1c1c1c, #424243);
+            background: #181818;
             color: white;
 
 
