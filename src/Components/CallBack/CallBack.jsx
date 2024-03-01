@@ -39,7 +39,7 @@ export default function CallBack({isOpen, updateState}) {
             <div className="w-full mt-5">
                 <label htmlFor="phone" className="block mb-2 text-white text-sm font-medium  ">Your Phone Number (required)</label>
                 {/* <input type="tel" id="phone"  className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required /> */}
-                <PhoneInput country={'eg'} inputProps={{  required: true,  }} className="   text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1  "/>
+                <PhoneInput country={'eg'} inputProps={{  required: true,  }} style={{width: "100%"}} className="   text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1  "/>
             </div>
 
             <div className="w-full mt-5">
