@@ -4,11 +4,45 @@ import 'react-phone-input-2/lib/style.css';
 
 import "./heroStyle.scss";
 import rocketImg from "../../assets/lunch-emoji.png"
+import { useRef, useState } from "react";
 
 export default function Hero() {
 
 
+    const [phoneNumber, setPhoneNumber ] = useState("");
 
+    function handlePhoneNumber (value) { 
+        setPhoneNumber(value)
+    }
+
+
+
+    const nameInputRef = useRef(null);
+    // const phoneNumberRef = useRef(null);
+    const emailInputRef = useRef(null);
+    const messageInputRef = useRef(null);
+
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        let userInfo = {}
+    
+        // store User Data 
+        userInfo.name = nameInputRef.current.value;
+        userInfo.phoneNumber = phoneNumber;
+        userInfo.email = emailInputRef.current.value;
+        userInfo.message = messageInputRef.current.value;
+
+
+
+        // Reset input fields
+        nameInputRef.current.value = '';
+        // phoneNumberRef.current.value = '';
+        emailInputRef.current.value = '';
+        messageInputRef.current.value = '';
+    
+    };
 
 
 
@@ -43,30 +77,29 @@ export default function Hero() {
 
             <div className="heroRight w-full lg:w-1/3">
 
-                <form>
+                <form  onSubmit={handleSubmit}>
                     <div className="flex flex-wrap w-1/full md:w-2/3 lg:w-full ">
                         <div className="w-full  mt-5">
 
                             <h3 className="mb-5 text-white text-2xl w-full text-center"> Get a Call-Back in 50 seconds ! </h3>
 
                             <label htmlFor="first_name" className="block mb-2 text-white text-sm font-medium text-gray-900 ">Your name (required) </label>
-                            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
+                            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " ref={nameInputRef}  required />
                         </div>
 
                         <div className="w-full mt-5">
                             <label htmlFor="phone" className="block mb-2 text-white text-sm font-medium text-gray-900 ">Your Phone Number (required)</label>
-                            {/* <input type="tel" id="phone"  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required /> */}
-                            <PhoneInput country={'eg'} inputProps={{  required: true,  }} className=" text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1  "/>
+                            <PhoneInput country={'us'} inputProps={{  required: true,  }} className=" text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1 "  onChange={handlePhoneNumber} value={phoneNumber } />
                         </div>
 
                         <div className="w-full mt-5">
                             <label htmlFor="email" className="block mb-2 text-white text-sm font-medium text-gray-900 ">Your email address </label>
-                            <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
+                            <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " ref={emailInputRef}  required />
                         </div>  
 
                         <div className="w-full mt-5">
-                            <label htmlFor="website" className="block mb-2 text-white text-sm font-medium text-gray-900 "> Message (Optional)</label>
-                            <input type="url" id="website" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "   />
+                            <label htmlFor="message" className="block mb-2 text-white text-sm font-medium text-gray-900 "> Message (Optional)</label>
+                            <input type="text" id="message" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " ref={messageInputRef}   />
                         </div>
 
                         <button type="submit" className="text-white bg-mainBackColor w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl"> Call Me !</button>

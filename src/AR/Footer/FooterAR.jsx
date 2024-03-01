@@ -11,6 +11,7 @@ import footerwestern from "../../assets/footer/western-union.svg"
 
 import "./FooterARStyle.scss"
 import { Link } from 'react-router-dom';
+import { useRef, useState } from 'react';
 
 
 function toTop() {
@@ -18,6 +19,47 @@ function toTop() {
 }
 
 export default function FooterAR() {
+
+
+    const [phoneNumber, setPhoneNumber ] = useState("");
+
+    function handlePhoneNumber (value) { 
+        setPhoneNumber(value)
+    }
+
+
+
+    const nameInputRef = useRef(null);
+    // const phoneNumberRef = useRef(null);
+    const emailInputRef = useRef(null);
+    const messageInputRef = useRef(null);
+
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        let userInfo = {}
+    
+        // store User Data 
+        userInfo.name = nameInputRef.current.value;
+        userInfo.phoneNumber = phoneNumber;
+        userInfo.email = emailInputRef.current.value;
+        userInfo.message = messageInputRef.current.value;
+
+
+
+        // Reset input fields
+        nameInputRef.current.value = '';
+        // phoneNumberRef.current.value = '';
+        emailInputRef.current.value = '';
+        messageInputRef.current.value = '';
+    
+    };
+
+
+
+
+
     return (
     <div id="footerAR">
         <div className="container flex justify-center items-center flex-wrap py-20 pt-12">
@@ -25,7 +67,7 @@ export default function FooterAR() {
 
             <div className="footerLeft w-full lg:w-1/3">
 
-                <form className="flex flex-wrap  " >
+                <form onSubmit={handleSubmit} className="flex flex-wrap  " >
 
                         <h3 className="mb-5 text-4xl w-full text-white"> <strong>احجز استشارة مجانية الآن</strong>  </h3>
 
@@ -33,23 +75,22 @@ export default function FooterAR() {
 
 
                             <label htmlFor="first_name" className="block mb-2 text-white text-sm font-medium text-gray-900 ">اسمك (مطلوب) </label>
-                            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
+                            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " ref={nameInputRef}  required />
                         </div>
 
                         <div className="w-full mt-5">
                             <label htmlFor="phone" className="block mb-2 text-white text-sm font-medium text-gray-900 ">رقم هاتفك (مطلوب)</label>
-                            {/* <input type="tel" id="phone"  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required /> */}
-                            <PhoneInput country={'eg'} inputProps={{  required: true,  }} className="bg-gray-50 phInput text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1  "/>
+                            <PhoneInput country={'us'} inputProps={{  required: true,  }} className="bg-gray-50 phInput text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1 "  onChange={handlePhoneNumber} value={phoneNumber } />
                         </div>
 
                         <div className="w-full mt-5">
                             <label htmlFor="email" className="block mb-2 text-white text-sm font-medium text-gray-900 ">عنوان بريدك الإلكتروني </label>
-                            <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
+                            <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2 "  ref={emailInputRef}  required />
                         </div>  
 
                         <div className="w-full mt-5">
-                            <label htmlFor="website" className="block mb-2 text-white text-sm font-medium text-gray-900 "> رسالة (اختياري)</label>
-                            <input type="url" id="website" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "   />
+                            <label htmlFor="message" className="block mb-2 text-white text-sm font-medium text-gray-900 "> رسالة (اختياري)</label>
+                            <input type="text" id="message" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  ref={messageInputRef}  />
                         </div>
 
                         <button type="submit" className="text-white bg-mainBackColor w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl"> اتصل بي !</button>

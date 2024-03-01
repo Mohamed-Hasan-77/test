@@ -8,6 +8,7 @@ import footermastercard from "../../assets/footer/card-mastercard.svg"
 import footerexpress from "../../assets/footer/american-express.svg"
 import footerpaypal from "../../assets/footer/paypal.svg"
 import footerwestern from "../../assets/footer/western-union.svg"
+import { useRef, useState } from "react";
 
 
 
@@ -17,6 +18,41 @@ export default function PolicyFooter() {
     function toTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+
+
+
+
+
+    const nameInputRef = useRef(null);
+    const lastNameRef = useRef(null);
+    const phoneNumberRef = useRef(null);
+    const emailInputRef = useRef(null);
+    const messageInputRef = useRef(null);
+
+    
+    const handleSubmit = (event) => {
+        event.preventDefault();
+
+        let userInfo = {}
+    
+        // store User Data 
+        userInfo.name = nameInputRef.current.value;
+        userInfo.Lname = lastNameRef.current.value;
+        userInfo.phoneNumber = phoneNumberRef.current.value;
+        userInfo.email = emailInputRef.current.value;
+        userInfo.message = messageInputRef.current.value;
+
+
+        // Reset input fields
+        nameInputRef.current.value = '';
+        lastNameRef.current.value = '';
+        phoneNumberRef.current.value = '';
+        emailInputRef.current.value = '';
+        messageInputRef.current.value = '';
+    
+    };
+
 
 
 return <>
@@ -51,32 +87,32 @@ return <>
 
             <div className="policyRight w-full lg:w-1/2 border p-12 rounded-2xl">
 
-                <form>
+                <form  onSubmit={handleSubmit} >
                     <div className="flex flex-wrap w-1/full md:w-2/3 lg:w-full ">
 
                         <div className="w-1/2  mt-5 px-2">
                             <label htmlFor="first_name" className="block mb-2 text-white text-sm font-medium text-gray-900 ">First name </label>
-                            <input type="text" id="first_name" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
+                            <input type="text" id="first_name" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2 " ref={nameInputRef}  required />
                         </div>
 
                         <div className="w-1/2  mt-5 px-2">
                             <label htmlFor="last_name" className="block mb-2 text-white text-sm font-medium text-gray-900 ">Last name </label>
-                            <input type="text" id="last_name" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
+                            <input type="text" id="last_name" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " ref={lastNameRef}  required />
                         </div>
 
                         <div className="w-full mt-5">
                             <label htmlFor="email" className="block mb-2 text-white text-sm font-medium text-gray-900 "> Email Address </label>
-                            <input type="email" id="email" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
+                            <input type="email" id="email" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " ref={emailInputRef}  required />
                         </div>  
             
                         <div className="w-full mt-5">
                             <label htmlFor="phone" className="block mb-2 text-white text-sm font-medium text-gray-900 "> Phone </label>
-                            <input type="tel" id="email" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
+                            <input type="tel" id="email" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  ref={phoneNumberRef }  required />
                         </div>
 
                         <div className="w-full mt-5">
                             <label htmlFor="Message" className="block mb-2 text-white text-sm font-medium text-gray-900 "> Message (Optional)</label>
-                            <textarea  id="Message" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "   />
+                            <textarea  id="Message" className=" border border-gray-300 text-white text-sm bg-transparent focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " ref={messageInputRef}   />
                         </div>
                     
 
