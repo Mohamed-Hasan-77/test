@@ -8,7 +8,7 @@ import footermastercard from "../../assets/footer/card-mastercard.svg"
 import footerexpress from "../../assets/footer/american-express.svg"
 import footerpaypal from "../../assets/footer/paypal.svg"
 import footerwestern from "../../assets/footer/western-union.svg"
-import { useRef, useState } from "react";
+import { useRef } from "react";
 
 
 
@@ -18,9 +18,6 @@ export default function PolicyFooter() {
     function toTop() {
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
-
-
-
 
 
 
