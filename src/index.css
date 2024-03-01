@@ -233,3 +233,8 @@ body {
   width: 100% !important;
   outline: none !important;
 }
+
+.react-tel-input .flag-dropdown {
+  height: 40px !important;
+  margin: auto !important;
+}
