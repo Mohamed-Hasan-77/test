@@ -213,3 +213,23 @@ body {
 .lang {
   font-weight: bold;
 }
+
+
+
+
+
+
+.react-tel-input .form-control {
+  position: relative;
+  font-size: 14px !important;
+  letter-spacing: .01rem !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-left: 48px !important;
+  margin-left: 0 !important;
+  border-radius: 5px !important;
+  line-height: 25px !important;
+  height: 40px !important;
+  width: 100% !important;
+  outline: none !important;
+}
