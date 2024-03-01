@@ -12,7 +12,6 @@ import FooterAR from '../Footer/FooterAR'
 
 
 
-
 export default function HomeAR() {
 return <>
     <HeroAR/>

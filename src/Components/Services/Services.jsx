@@ -10,11 +10,9 @@ import img6 from "../../assets/no-local-employee-quota.svg"
 import { useState } from "react"
 
 
-import XphoneImg from "../../assets/ClosePhone.svg"
-import logoImg from "../../assets/smart-zones-uae-business-setup-logo.svg"
 
-import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+import CallBack from "../CallBack/CallBack"
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
@@ -23,6 +21,13 @@ import 'react-phone-input-2/lib/style.css';
 export default function Services() {
 
     const [requestCallBack, setRequestCallBack] = useState(false);
+
+
+    
+    const updateRequestCallBack = (newState) => {
+        setRequestCallBack(newState);
+    };
+
 
 
     let boxesData = [ 
@@ -65,12 +70,12 @@ export default function Services() {
     return <>
     
     
-    <div className="services">
+    <div className="services py-10 lg:py-20 ">
 
         <div className="container">
-                <h2>
-                    <span className="under-line"> Our </span> Comprehensive 
-                    <span className="textMainColor"> Business Setup Services </span>
+                <h2 className="mb-5">
+                    Our  Comprehensive 
+                    <span className="textMainColor"> Business Setup <span className="under-line textMainColor">  Services </span> </span>
                 </h2>
 
 
@@ -99,58 +104,11 @@ export default function Services() {
     
     
     
-    <div className={`requestCallback   ${requestCallBack == false ? "invisible opacity-0 hidden "  :  "visible opacity-1 flex"  } `}>
+    <CallBack isOpen={requestCallBack}  updateState={updateRequestCallBack} />
 
-<div className={`requestBox  `}>
-
-<img onClick={()=> setRequestCallBack(!requestCallBack)} src={XphoneImg} width={16} className='closeRequest' alt="XImg"  />
-
-    <form>
-        <div className="flex flex-wrap  ">
-            <div className="w-full ">
-
-                <div className="title text-white">
-
-                  <div className="logo flex justify-center mb-3">
-                    <img  src={logoImg} className='w-24'  alt="logo"/>
-                  </div>
-                  <p className="  text-xl w-full text-center">We offer licences that support </p>
-                  <p className="  text-xl w-full text-center"> your business in UAE </p>
-                  <p className="my-5  text-xl w-full text-center"> Get a Call-Back in 50 seconds </p>
-                </div>
-
-                <label htmlFor="first_name" className="block mb-2 text-white text-sm font-medium  ">Your name (required) </label>
-                <input type="text" id="first_name" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
-            </div>
-
-            <div className="w-full mt-5">
-                <label htmlFor="phone" className="block mb-2 text-white text-sm font-medium  ">Your Phone Number (required)</label>
-                {/* <input type="tel" id="phone"  className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required /> */}
-                <PhoneInput country={'eg'} inputProps={{  required: true,  }} className="bg-gray-50   text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1  "/>
-            </div>
-
-            <div className="w-full mt-5">
-                <label htmlFor="email" className="block mb-2 text-white text-sm font-medium  ">Your email address </label>
-                <input type="email" id="email" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
-            </div>  
-
-            <div className="w-full mt-5">
-                <label htmlFor="website" className="block mb-2 text-white text-sm font-medium  "> Message (Optional)</label>
-                <input type="url" id="website" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "   />
-            </div>
-
-            <button type="submit" className="text-white bg-green-700 hover:bg-black transition-colors w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl"> Call Me !</button>
-
-        </div>
-
-    </form>
-
-</div>
-
-</div>
 
 
 </>
-   
+
     
 }

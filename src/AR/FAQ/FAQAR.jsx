@@ -14,7 +14,7 @@ export default function FAQAR() {
     <div className="faqsAR">
         <div className="container">
             <div className="title">
-                <h2 className="line-under"> الأسئلة الشائعة </h2>
+                <h2 className="under-lineAR"> الأسئلة الشائعة </h2>
             </div>    
 
     

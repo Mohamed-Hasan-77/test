@@ -23,8 +23,14 @@ export default function HeroAR() {
     </div> 
     <div className="heroTitle ">
         <h1>
-            أطلق شركة أحلامك في الإمارات
-            ب <span className="under-line"> فقط </span> 5,650 درهم إماراتي
+
+        <span className="under-lineAR">
+
+        أطلق 
+        </span>
+        شركة أحلامك في الإمارات  فقط ب 5,650 درهم إماراتي 
+
+
         </h1>
 
         <h2 className="text-3xl mt-7">

@@ -89,3 +89,15 @@
 
 
 }
+
+
+
+
+.slick-dots li button:before {
+    content: "";
+    background: linear-gradient(-90deg, #912583, #e94057, #f27022);
+    top: 25px;
+    width: 25px;
+    height: 5px;
+    border-radius: 5px;
+}

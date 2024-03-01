@@ -6,12 +6,9 @@ import pointImg from "../../assets/تنزيل (2).svg"
 import ArrowDown from "../../assets/arrow-down-3101.svg"
 
 
-import XphoneImg from "../../assets/ClosePhone.svg"
-import logoImg from "../../assets/smart-zones-uae-business-setup-logo.svg"
 
-import PhoneInput from 'react-phone-input-2';
-import 'react-phone-input-2/lib/style.css';
 import { useState } from "react"
+import CallBackAR from "../CallBackAR/CallBackAR"
 
 
 
@@ -20,10 +17,12 @@ export default function UAEDifferentAR() {
 
     const [requestCallBack, setRequestCallBack] = useState(false);
 
-
+    const updateRequestCallBack = (newState) => {
+        setRequestCallBack(newState);
+    };
 
     return <>
-    <div className="UAEDifferentAR bg-white py-24">
+    <div className="UAEDifferentAR bg-white py-24 pt-10">
 
         <div className="container flex  items-center justify-between flex-wrap overflow-hidden lg:overflow-visible">
 
@@ -34,7 +33,7 @@ export default function UAEDifferentAR() {
             <div className="text w-full lg:w-1/2 mt-24 lg:mt-0">
                 <h3>
                 ما الذي يميز 
-                <span className="textMainColor"> <span className="under-line textMainColor"> سماركتينج </span><sup className="font-2 fw-light textMainColor">®</sup> الإمارات؟ </span>
+                <span className="textMainColor"> <span className="under-lineAR textMainColor"> اس ماركتينج </span><sup className="font-2 fw-light textMainColor">®</sup> الإمارات؟ </span>
                 </h3>
 
                 <div className="m-2 space-y-5">
@@ -133,55 +132,8 @@ export default function UAEDifferentAR() {
 
 
 
-        <div className={`requestCallback   ${requestCallBack == false ? "invisible opacity-0 hidden "  :  "visible opacity-1 flex"  } `}>
+    <CallBackAR isOpen={requestCallBack}  updateState={updateRequestCallBack} />
 
-            <div className={`requestBox  `}>
-
-            <img onClick={()=> setRequestCallBack(!requestCallBack)} src={XphoneImg} width={16} className='closeRequest' alt="XImg"  />
-
-                <form>
-                    <div className="flex flex-wrap  ">
-                        <div className="w-full ">
-
-                            <div className="title text-white">
-
-                            <div className="logo flex justify-center mb-3">
-                                <img  src={logoImg} className='w-24'  alt="logo"/>
-                            </div>
-                            <p className="  text-xl w-full text-center">We offer licences that support </p>
-                            <p className="  text-xl w-full text-center"> your business in UAE </p>
-                            <p className="my-5  text-xl w-full text-center"> Get a Call-Back in 50 seconds </p>
-                            </div>
-
-                            <label htmlFor="first_name" className="block mb-2 text-white text-sm font-medium  ">Your name (required) </label>
-                            <input type="text" id="first_name" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
-                        </div>
-
-                        <div className="w-full mt-5">
-                            <label htmlFor="phone" className="block mb-2 text-white text-sm font-medium  ">Your Phone Number (required)</label>
-                            {/* <input type="tel" id="phone"  className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required /> */}
-                            <PhoneInput country={'eg'} inputProps={{  required: true,  }} className="bg-gray-50   text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1  "/>
-                        </div>
-
-                        <div className="w-full mt-5">
-                            <label htmlFor="email" className="block mb-2 text-white text-sm font-medium  ">Your email address </label>
-                            <input type="email" id="email" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
-                        </div>  
-
-                        <div className="w-full mt-5">
-                            <label htmlFor="website" className="block mb-2 text-white text-sm font-medium  "> Message (Optional)</label>
-                            <input type="url" id="website" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "   />
-                        </div>
-
-                        <button type="submit" className="text-white bg-green-700 hover:bg-black transition-colors w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl"> Call Me !</button>
-
-                    </div>
-
-                </form>
-
-            </div>
-
-        </div>
 
 
     </>

@@ -10,7 +10,7 @@ import "./ReviewsStyle.scss"
 function ReviewsSlider() {
     const settings = {
         infinite: true,
-        dots:false,
+        dots:true,
         speed: 500,
         autoplay: true,
         slidesToShow: 3,

@@ -1,22 +1,34 @@
 import "./packagas.scss"
-
+import 'react-phone-input-2/lib/style.css';
+import { useState } from "react";
+import CallBack from "../CallBack/CallBack";
 
 
 
 
 export default function Packages() {
-  return (
+
+const [requestCallBack, setRequestCallBack] = useState(false);
+
+
+
+const updateRequestCallBack = (newState) => {
+    setRequestCallBack(newState);
+};
+
+    return <>
+
     <div className="packages py-14">
         
     <div className="container">
-    <div className="sectionTitle  text-center my-16   ">
-        <h2 className="my-5  "> Company Setup Packages </h2>
+    <div className="sectionTitle  text-center my-10 mt-5   ">
+        <h2 className="my-5  "> <span className="under-line"> Company </span>  Setup Packages </h2>
 
-     <p style={{fontSize: "16px"}} className="text-gray-500  w-3/4 mx-auto"> We assess our clients requirements and offer the most practical and cost-effective rates for mainland, offshore, and free packages. </p>
+    <p style={{fontSize: "16px"}} className="text-gray-500  w-3/4 mx-auto"> We assess our clients requirements and offer the most practical and cost-effective rates for mainland, offshore, and free packages. </p>
 
         </div>
 
-      <div className="packagesCards flex flex-wrap mt-10">
+        <div className="packagesCards flex flex-wrap mt-10">
 
 
         <div className="card  w-full lg:w-1/3 mb-10  bg-mainLinearColor py-5 px-3  lg:rounded-s-xl  shadow-md hover:scale-105 transition-all duration-500 ">
@@ -30,9 +42,7 @@ export default function Packages() {
 
                 <p className="text-center text-gray-400 mt-10  "> Multiple shareholders permitted </p>
 
-            <div className="btn text-center  ">
-                <button className="text-center bg-mainBackColor text-white py-2.5 px-10 w-full rounded-2xl text-xl"> APPLY NOW !</button>
-            </div>
+
 
             <div className=" w-full seperator"/>
 
@@ -52,7 +62,7 @@ export default function Packages() {
             <div className="  w-full seperator"/>
 
                 <div className="btn text-center my-7">
-                        <button className="text-center bg-mainBackColor text-white py-2.5 px-10 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+                        <button onClick={()=> setRequestCallBack(!requestCallBack)} className="text-center bg-mainBackColor text-white py-2.5 px-10 w-full rounded-2xl text-xl"> APPLY NOW !</button>
                     </div>
 
 
@@ -73,9 +83,6 @@ export default function Packages() {
 
             <p className="text-center text-gray-700 mt-10 opacity-0 "> .... </p>
 
-        <div className="btn text-center ">
-            <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
-        </div>
 
         <div className="  w-full seperator"/>
 
@@ -96,11 +103,11 @@ export default function Packages() {
             <li className="mb-lg-4 mb-3 lh-sm">Bank Account Opening Assistant</li> 
         </ul>
 
-        <div className="bottomCard  mt-24">
+        <div className="bottomCard ">
         <div className="  w-full seperator"/>
 
             <div className="btn text-center my-7">
-                    <button className="text-center bg-mainBackColor  text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+                    <button onClick={()=> setRequestCallBack(!requestCallBack)} className="text-center bg-mainBackColor  text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
                 </div>
 
 
@@ -120,9 +127,6 @@ export default function Packages() {
 
             <p className="text-center text-gray-400 mt-10  "> License with 100% Ownership </p>
 
-        <div className="btn text-center">
-            <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
-        </div>
 
         <div className="  w-full seperator"/>
 
@@ -139,11 +143,11 @@ export default function Packages() {
              <li className="mb-3 mb-lg-3 lh-sm">Bank Account Opening Assistant</li>
         </ul>
 
-        <div className="bottomCard  mt-24">
+        <div className="bottomCard  ">
         <div className="  w-full seperator"/>
 
             <div className="btn text-center my-7">
-                    <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
+                    <button onClick={()=> setRequestCallBack(!requestCallBack)} className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl"> APPLY NOW !</button>
                 </div>
 
 
@@ -156,5 +160,15 @@ export default function Packages() {
 
 
     </div>
-    )
+  
+  
+
+
+
+
+    <CallBack isOpen={requestCallBack}  updateState={updateRequestCallBack} />
+
+
+</>
+
 }

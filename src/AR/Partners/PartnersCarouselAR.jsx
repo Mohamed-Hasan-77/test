@@ -17,11 +17,9 @@ export default function PartnersCarouselAR() {
   return (
     <div className='PartnersAR '>
 
-
     <div className="secTitle text-center">
         <h2> <span className="under-linee" > شركاؤنا الرسميون </span> </h2>
     </div>
-
 
 <div className="slider ">
 	<div className="slide-track">

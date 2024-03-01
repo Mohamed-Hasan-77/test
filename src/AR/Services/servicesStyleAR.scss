@@ -2,10 +2,11 @@
     direction: rtl;
     font-family: "El Messiri", sans-serif;
 
-    padding: 70px 0;
+    padding: 20px 0;
     background-color: white;
 
     h2 {
         font-size: clamp(2.25rem, 1.7803rem + 2.0875vw, 3.5625rem);
+        line-height: 2;
     }
 }

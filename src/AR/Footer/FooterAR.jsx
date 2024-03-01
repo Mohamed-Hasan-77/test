@@ -65,7 +65,7 @@ export default function FooterAR() {
 
             <div className="footerTitle ">
                     <h3 className='text-3xl font-bold'>
-                        تواصل مع مستشاري إعداد الأعمال في سماركتينج<sup className="font-2 fw-light mr-1">®  </sup>
+                        تواصل مع مستشاري إعداد الأعمال في اس ماركتينج<sup className="font-2 fw-light mr-1">®  </sup>
                         الإمارات العربية المتحدة اليوم
                     </h3>
 

@@ -51,6 +51,22 @@ body {
 }
 
 
+
+.under-lineAR {
+  position: relative;
+}
+
+.under-lineAR::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  height: 4px;
+  width: 50%;
+  background: linear-gradient(-90deg, #912583, #e94057, #f27022);
+}
+
+
 .contactPhone .phoneClick {
   display: flex;
   justify-content: center;
@@ -73,7 +89,7 @@ body {
   top: 0;
   left: 0;
   width: 60px;
-  border: 1px solid #d7b15f;
+  border: 1px solid rgb(237 84 65);
   height: 60px;
   transform-origin: center center;
   box-sizing: border-box;

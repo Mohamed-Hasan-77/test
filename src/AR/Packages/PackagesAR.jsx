@@ -1,14 +1,26 @@
+import { useState } from "react";
 import "./packagesARStyle.scss"
 
 
 
+import CallBackAR from './../CallBackAR/CallBackAR';
+
 export default function PackagesAR() {
-return (
+
+
+    const [requestCallBack, setRequestCallBack] = useState(false);
+
+    const updateRequestCallBack = (newState) => {
+        setRequestCallBack(newState);
+    };
+
+return <>
+
     <div className="packagesAR py-14">
         
         <div className="container">
-    <div className="sectionTitle text-center my-16">
-        <h2 className="my-5">باقات إعداد الشركات</h2>
+    <div className="sectionTitle text-center my-15 mt-5">
+        <h2 className="my-2">     باقات إعداد الشركات    </h2>
 
         <p style={{fontSize: "16px"}} className="text-gray-500 w-3/4 mx-auto">نقوم بتقييم متطلبات عملائنا ونقدم أكثر الأسعار عملية وتكلفة فعالة للبر الرئيسي والمناطق الحرة والخارجية.</p>
     </div>
@@ -25,9 +37,7 @@ return (
 
             <p className="text-center text-gray-400 mt-10">مسموح بعدة مساهمين</p>
 
-            <div className="btn text-center">
-                <button className="text-center bg-mainBackColor text-white py-2.5 px-10 w-full rounded-2xl text-xl">قدم الآن!</button>
-            </div>
+    
 
             <div className="w-full seperator"/>
 
@@ -47,7 +57,7 @@ return (
                 <div className="w-full seperator"/>
 
                 <div className="btn text-center my-7">
-                    <button className="text-center bg-mainBackColor text-white py-2.5 px-10 w-full rounded-2xl text-xl">قدم الآن!</button>
+                    <button onClick={()=> setRequestCallBack(!requestCallBack)} className="text-center bg-mainBackColor text-white py-2.5 px-10 w-full rounded-2xl text-xl">قدم الآن!</button>
                 </div>
 
                 <p className="text-sm text-center">تطبق الشروط والأحكام*</p>
@@ -64,9 +74,6 @@ return (
 
             <p className="text-center text-gray-700 mt-10 opacity-0">....</p>
 
-            <div className="btn text-center">
-                <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl">قدم الآن!</button>
-            </div>
 
             <div className="w-full seperator"/>
 
@@ -91,7 +98,7 @@ return (
                 <div className="w-full seperator"/>
 
                 <div className="btn text-center my-7">
-                    <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl">قدم الآن!</button>
+                    <button onClick={()=> setRequestCallBack(!requestCallBack)} className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl">قدم الآن!</button>
                 </div>
 
                 <p className="text-sm text-center">تطبق الشروط والأحكام*</p>
@@ -108,9 +115,6 @@ return (
 
             <p className="text-center text-gray-400 mt-10">ترخيص بملكية 100%</p>
 
-            <div className="btn text-center">
-                <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl">قدم الآن!</button>
-            </div>
 
             <div className="w-full seperator"/>
 
@@ -131,7 +135,7 @@ return (
                 <div className="w-full seperator"/>
 
                 <div className="btn text-center my-7">
-                    <button className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl">قدم الآن!</button>
+                    <button onClick={()=> setRequestCallBack(!requestCallBack)} className="text-center bg-mainBackColor text-white py-2.5 px-12 w-full rounded-2xl text-xl">قدم الآن!</button>
                 </div>
 
                 <p className="text-sm text-center">تطبق الشروط والأحكام*</p>
@@ -144,5 +148,9 @@ return (
 
 
     </div>
-    )
+
+
+    <CallBackAR isOpen={requestCallBack}  updateState={updateRequestCallBack} />
+
+    </>
 }

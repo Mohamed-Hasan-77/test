@@ -1,15 +1,15 @@
 import './App.css'
 
-
-import phoneImg from "./assets/phone.svg"
+import phoneImg from "./assets/phone.svg"   
 import XphoneImg from "./assets/ClosePhone.svg"
-import logoImg from "./assets/smart-zones-uae-business-setup-logo.svg"
-
-import { useState } from 'react'
-
-
+import logoImg from "./assets/logosmarketing-T1-CEl9BVmk.png"
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
+
+
+
+
+
 import {
   createBrowserRouter,
   RouterProvider} from "react-router-dom";
@@ -21,6 +21,8 @@ import CookiesPolicy from './Components/CookiesPolicy/CookiesPolicy'
 import NotFound from './Components/NotFound/NotFound'
 import PrivacyAR from './Components/PrivacyAR/PrivacyAR'
 import HomeAR from './AR/Home/HomeAR'
+import { useState } from 'react';
+import CallBack from './Components/CallBack/CallBack';
 
 
 // s
@@ -54,6 +56,9 @@ function App() {
   const [requestCallBack, setRequestCallBack] = useState(false);
 
 
+  const updateRequestCallBack = (newState) => {
+      setRequestCallBack(newState);
+  };
 
 
 
@@ -64,56 +69,7 @@ function App() {
   <RouterProvider router={router}/>
 
 
-      <div className={`requestCallback   ${requestCallBack == false ? "invisible opacity-0 hidden "  :  "visible opacity-1 flex"  } `}>
-
-          <div className={`requestBox  `}>
-
-          <img onClick={()=> setRequestCallBack(!requestCallBack)} src={XphoneImg} width={16} className='closeRequest' alt="XImg"  />
-
-              <form>
-                  <div className="flex flex-wrap  ">
-                      <div className="w-full ">
-
-                          <div className="title text-white">
-
-                            <div className="logo flex justify-center mb-3">
-                              <img  src={logoImg} className='w-24'  alt="logo"/>
-                            </div>
-                            <p className="  text-xl w-full text-center">We offer licences that support  </p>
-                            <p className="  text-xl w-full text-center"> your business in UAE </p>
-                            <p className="my-5  text-xl w-full text-center"> Get a Call-Back in 50 seconds </p>
-                          </div>
-
-                          <label htmlFor="first_name" className="block mb-2 text-white text-sm font-medium  ">Your name (required) </label>
-                          <input type="text" id="first_name" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
-                      </div>
-
-                      <div className="w-full mt-5">
-                          <label htmlFor="phone" className="block mb-2 text-white text-sm font-medium  ">Your Phone Number (required)</label>
-                          {/* <input type="tel" id="phone"  className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  " pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required /> */}
-                          <PhoneInput country={'eg'} inputProps={{  required: true,  }} className="bg-gray-50   text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-1  "/>
-                      </div>
-
-                      <div className="w-full mt-5">
-                          <label htmlFor="email" className="block mb-2 text-white text-sm font-medium  ">Your email address </label>
-                          <input type="email" id="email" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  required />
-                      </div>  
-
-                      <div className="w-full mt-5">
-                          <label htmlFor="website" className="block mb-2 text-white text-sm font-medium  "> Message (Optional)</label>
-                          <input type="url" id="website" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "   />
-                      </div>
-
-                      <button type="submit" className="text-white bg-green-700 hover:bg-black transition-colors w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl"> Call Me !</button>
-
-                  </div>
-
-              </form>
-
-          </div>
-
-      </div>
-
+    <CallBack isOpen={requestCallBack}  updateState={updateRequestCallBack} />
 
 
       <div className="whatsapp fixed  bottom-7 left-2 z-10">
@@ -127,30 +83,29 @@ function App() {
 
       <div className="contactPhone fixed  bottom-7 right-5 flex flex-col justify-center space-y-5 z-10">
           
-              <ul  className={`flBtn-first   ${phoneClick == false ? "invisible opacity-0"  :  "visible opacity-1"  } `}> 
-
-                  <li onClick={()=> setRequestCallBack(!requestCallBack)} className='cllback'>
-                    <span className="popmake-161 pum-trigger" tooltip="Request a Callback" style={{cursor: "pointer"}}>
-                      <svg viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g><g><path d="m341.7,450.9c-9,6.3-33.3,21.9-88.6-13.2-51.6-32.7-163.7-118.5-197.2-286.2-9.5-47.3-3.3-72.3 19-87.7 38.1-26.3 74.8-3 82.4,10.8 28.4,51.2-16.7,80.5-28.4,87-7.5,4.1-12.2,11.7-11.5,20.2 5.5,62.2 74.6,162.1 129.6,187.6 7.6,3.5 17,2.3 22.7-3.8 8.1-8.7 55.4-40.6 90.8,3.8 19.4,24.1 9.2,62-18.8,81.5zm-88.4-124.8c-37.3-25-82.4-90.6-93.1-135.4 0.5-0.3 82.2-54.6 30.7-139.3-14.9-24.4-46.9-40.4-78.8-40.4-21.5,0-42.5,6.7-60.6,19.3-46.1,32.1-44.1,82.9-35.9,127.9 24.4,134 113.3,253.4 216.9,314.8 23.2,13.8 50.9,28.1 80.7,28.1 18.5,0 36-5.6 51.8-16.6 46.4-32.3 59.8-100.1 29.2-138.3-62.1-77.4-140.4-20.5-140.9-20.1z"></path><path d="m480.6,146.7h-138.9l42.7-39.3c8.3-7.6 8.8-20.6 1.2-28.9-7.6-8.3-20.5-8.8-28.8-1.2l-81.2,74.7c-4.2,3.9-6.6,9.3-6.6,15 0,5.7 2.4,11.2 6.6,15l81.2,74.7c3.9,3.6 19,8.4 28.8-1.2 8.1-7.9 7.1-21.2-1.2-28.9l-42.7-39.3h138.9c11.3,0 20.4-9.1 20.4-20.4 0-11.1-9.1-20.2-20.4-20.2z"></path></g></g></svg>
-                    </span> 
-
-                  </li>
-                
-                    <li className='callUs mt-4 '>
-                        <a className="btn" href="tel:+971557480115" tooltip="Call Us Now !">
-                          <svg viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g><g><path d="m341.6,450.9c-9,6.3-33.3,21.9-88.6-13.2-51.5-32.7-163.6-118.5-197.1-286.2-9.5-47.3-3.3-72.3 18.9-87.7 38-26.3 74.7-3 82.4,10.8 28.4,51.2-16.7,80.5-28.3,87-7.5,4.1-12.2,11.7-11.5,20.2 5.5,62.2 74.5,162.1 129.6,187.6 7.6,3.5 17,2.3 22.7-3.8 8.1-8.7 55.4-40.6 90.8,3.8 19.3,24.1 9.1,62-18.9,81.5zm-88.4-124.8c-37.3-25-82.4-90.6-93.1-135.4 0.5-0.3 82.2-54.6 30.7-139.3-14.8-24.4-46.9-40.4-78.8-40.4-21.5,0-42.5,6.7-60.6,19.3-46,32.1-44,82.9-35.8,127.9 24.4,134 113.2,253.4 216.9,314.8 23.2,13.8 50.9,28.1 80.6,28.1 18.5,0 36-5.6 51.8-16.6 46.4-32.3 59.8-100.1 29.2-138.3-62.1-77.4-140.4-20.5-140.9-20.1z"></path><path d="m501,177.3c0-5.7-2.4-11.2-6.6-15l-81.2-74.7c-8.3-7.6-21.2-7.1-28.8,1.2-7.6,8.3-7.1,21.2 1.2,28.8l42.7,39.3h-139c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h138.9l-42.7,39.3c-8.3,7.6-8.8,20.6-1.2,28.9 7.6,8.3 20.6,8.8 28.8,1.2l81.2-74.7c4.3-4 6.7-9.4 6.7-15.1l0,0z"></path></g></g>
-                          </svg>
-                      </a> 
-                    </li>
-              </ul>
-
-              <div onClick={()=> setPhoneClick(!phoneClick)} className="phoneClick">
-
-                  {phoneClick == false ?  <img src={phoneImg} alt="phoneImg" /> :   <img src={XphoneImg} width={30} alt="XImg" /> }
-              </div>
-  
+          <ul  className={`flBtn-first   ${phoneClick == false ? "invisible opacity-0"  :  "visible opacity-1"  } `}> 
+      
+              <li onClick={()=> setRequestCallBack(!requestCallBack)} className='cllback'>
+                <span className="popmake-161 pum-trigger" tooltip="Request a Callback" style={{cursor: "pointer"}}>
+                  <svg viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g><g><path d="m341.7,450.9c-9,6.3-33.3,21.9-88.6-13.2-51.6-32.7-163.7-118.5-197.2-286.2-9.5-47.3-3.3-72.3 19-87.7 38.1-26.3 74.8-3 82.4,10.8 28.4,51.2-16.7,80.5-28.4,87-7.5,4.1-12.2,11.7-11.5,20.2 5.5,62.2 74.6,162.1 129.6,187.6 7.6,3.5 17,2.3 22.7-3.8 8.1-8.7 55.4-40.6 90.8,3.8 19.4,24.1 9.2,62-18.8,81.5zm-88.4-124.8c-37.3-25-82.4-90.6-93.1-135.4 0.5-0.3 82.2-54.6 30.7-139.3-14.9-24.4-46.9-40.4-78.8-40.4-21.5,0-42.5,6.7-60.6,19.3-46.1,32.1-44.1,82.9-35.9,127.9 24.4,134 113.3,253.4 216.9,314.8 23.2,13.8 50.9,28.1 80.7,28.1 18.5,0 36-5.6 51.8-16.6 46.4-32.3 59.8-100.1 29.2-138.3-62.1-77.4-140.4-20.5-140.9-20.1z"></path><path d="m480.6,146.7h-138.9l42.7-39.3c8.3-7.6 8.8-20.6 1.2-28.9-7.6-8.3-20.5-8.8-28.8-1.2l-81.2,74.7c-4.2,3.9-6.6,9.3-6.6,15 0,5.7 2.4,11.2 6.6,15l81.2,74.7c3.9,3.6 19,8.4 28.8-1.2 8.1-7.9 7.1-21.2-1.2-28.9l-42.7-39.3h138.9c11.3,0 20.4-9.1 20.4-20.4 0-11.1-9.1-20.2-20.4-20.2z"></path></g></g></svg>
+                </span> 
+      
+              </li>
+            
+                <li className='callUs mt-4 '>
+                    <a className="btn" href="tel:+971557480115" tooltip="Call Us Now !">
+                      <svg viewBox="0 0 512 512" enable-background="new 0 0 512 512"><g><g><path d="m341.6,450.9c-9,6.3-33.3,21.9-88.6-13.2-51.5-32.7-163.6-118.5-197.1-286.2-9.5-47.3-3.3-72.3 18.9-87.7 38-26.3 74.7-3 82.4,10.8 28.4,51.2-16.7,80.5-28.3,87-7.5,4.1-12.2,11.7-11.5,20.2 5.5,62.2 74.5,162.1 129.6,187.6 7.6,3.5 17,2.3 22.7-3.8 8.1-8.7 55.4-40.6 90.8,3.8 19.3,24.1 9.1,62-18.9,81.5zm-88.4-124.8c-37.3-25-82.4-90.6-93.1-135.4 0.5-0.3 82.2-54.6 30.7-139.3-14.8-24.4-46.9-40.4-78.8-40.4-21.5,0-42.5,6.7-60.6,19.3-46,32.1-44,82.9-35.8,127.9 24.4,134 113.2,253.4 216.9,314.8 23.2,13.8 50.9,28.1 80.6,28.1 18.5,0 36-5.6 51.8-16.6 46.4-32.3 59.8-100.1 29.2-138.3-62.1-77.4-140.4-20.5-140.9-20.1z"></path><path d="m501,177.3c0-5.7-2.4-11.2-6.6-15l-81.2-74.7c-8.3-7.6-21.2-7.1-28.8,1.2-7.6,8.3-7.1,21.2 1.2,28.8l42.7,39.3h-139c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h138.9l-42.7,39.3c-8.3,7.6-8.8,20.6-1.2,28.9 7.6,8.3 20.6,8.8 28.8,1.2l81.2-74.7c4.3-4 6.7-9.4 6.7-15.1l0,0z"></path></g></g>
+                      </svg>
+                  </a> 
+                </li>
+          </ul>
+      
+          <div onClick={()=> setPhoneClick(!phoneClick)} className="phoneClick">
+      
+              {phoneClick == false ?  <img src={phoneImg} alt="phoneImg" /> :   <img src={XphoneImg} width={30} alt="XImg" /> }
+          </div>
+      
       </div>
-
 
     </>
   )

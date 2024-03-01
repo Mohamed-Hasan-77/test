@@ -12,6 +12,16 @@ import FAQ from '../FAQ/FAQ'
 
 
 export default function Home() {
+
+
+
+
+
+    
+
+
+
+
 return <>
     <Packages/>
     <CompanySetup/>
@@ -22,5 +32,8 @@ return <>
     <BankPartners/>
     <Reviews/>
     <FAQ/>
+
+
+
     </>
 }
