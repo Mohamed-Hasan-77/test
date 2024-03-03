@@ -12,6 +12,7 @@ import 'react-phone-input-2/lib/style.css';
 
 import {
   createBrowserRouter,
+  createHashRouter,
   RouterProvider} from "react-router-dom";
 import Home from './Components/Home/Home'
 import Layout from './Components/Layout/LayoutAR'
@@ -23,11 +24,13 @@ import PrivacyAR from './Components/PrivacyAR/PrivacyAR'
 import HomeAR from './AR/Home/HomeAR'
 import { useState } from 'react';
 import CallBack from './Components/CallBack/CallBack';
+import CostCalculator from './Components/CostCalculator/CostCalculator';
+import CostCalculatorAR from './AR/CostCalculatorAr/CostCalculatorAR';
 
 
 // s
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {path: "",
   element: <Layout  />    , 
   children: [
@@ -40,6 +43,8 @@ const router = createBrowserRouter([
   {element: <PrivacyAR/>, path: 'PrivacyPolicyAr'},
   {element: <TermsAndConditions/>, path: 'TermsAndConditions'},
   {element: <CookiesPolicy/>, path: 'CookiesPolicy'},
+  {element: <CostCalculator/>, path: '/CostCalculator'},
+  {element: <CostCalculatorAR/>, path: '/CostCalculatorAR'},
   {
     path: "*",
     element: (

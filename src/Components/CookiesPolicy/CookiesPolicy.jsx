@@ -22,7 +22,7 @@ return (
 
         <div className="navright flex items-center ">
             <div className="btn mr-8">
-                <button className=" position-relative  bg-mainBackColor fw-bold  py-2 px-3  rounded-full outline-none"> COST CALCULATOR </button>
+                <button className=" position-relative  bg-mainBackColor fw-bold  py-2 px-3  rounded-full outline-none"> <Link to={'/CostCalculator'}>  COST CALCULATOR </Link> </button>
             </div>
 
 

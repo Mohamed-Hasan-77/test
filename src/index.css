@@ -111,14 +111,20 @@ body {
   border-radius: 50%;
   cursor: pointer;
   position: relative;
-  transition: background-color 0.5s;
+  transition: all 0.5s;
 
+}
+
+
+.contactPhone img,
+.contactPhone svg {
+  filter: invert(1);
 }
 
 
 .contactPhone .phoneClick:hover,
 .contactPhone li:hover {
-  background: white;
+  background: linear-gradient(90deg, #d340c0, #e44e62, #ea8a4e);
 }
 
 
@@ -201,6 +207,7 @@ body {
 
 
 
+
 .textMainColor {
   background: linear-gradient(-90deg, #912583, #e94057, #f27022);
   -webkit-background-clip: text;
@@ -237,4 +244,101 @@ body {
 .react-tel-input .flag-dropdown {
   height: 40px !important;
   margin: auto !important;
+}
+
+
+
+
+.wp-1 {
+  width: 10%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-2 {
+  width: 20%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-3 {
+  width: 30%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-4 {
+  width: 40%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-5 {
+  width: 50%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-6 {
+  width: 60%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-7 {
+  width: 70%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-8 {
+  width: 80%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-9 {
+  width: 90%;
+  transition: all 0.3s ease-in-out;
+}
+
+.wp-10 {
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+
+.top-5555 {
+  top: -500%;
+}
+
+
+
+.theloader {
+  border: 4px solid rgba(255, 255, 255, 0.646);
+  border-left-color: transparent;
+  border-radius: 50%;
+}
+
+.theloader {
+  border: 4px solid rgba(255, 255, 255, 0.646);
+  border-left-color: transparent;
+  width: 20px;
+  height: 20px;
+}
+
+.theloader {
+  border: 4px solid rgba(255, 255, 255, 0.646);
+  border-left-color: transparent;
+  width: 20px;
+  height: 20px;
+  animation: spin89345 1s linear infinite;
+}
+
+
+.submitDone {
+  filter: invert(1);
+}
+
+
+@keyframes spin89345 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }

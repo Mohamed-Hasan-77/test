@@ -5,6 +5,7 @@ import logoImg from "../../assets/logosmarketing-T1-CEl9BVmk.png"
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import { useState } from "react";
+import axios from "axios";
 
 
 
@@ -18,29 +19,78 @@ export default function CallBack({isOpen, updateState}) {
         }
 
         const nameInputRef = useRef(null);
-        // const phoneNumberRef = useRef(null);
         const emailInputRef = useRef(null);
         const messageInputRef = useRef(null);
+
+
+        async function senUserData(userData) {
+
+            // try and catch if you are not sure if there will be an error with api 
+            try {
+            let { data } = await axios.post( "https://sheetdb.io/api/v1/unnqcrthpchwd", userData );
+        
+            // catch the error 
+            } catch(err) {
+                // console.log(err.response);
+                
+                alert("something Wrong happened please try again")
+        
+            }
+        
+            }
 
         
         const handleSubmit = (event) => {
             event.preventDefault();
 
-            let userInfo = {}
+
+            let userInfo = {};
+
+
+            const date = new Date();
+            let day = date.getDate();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+
+            // This arrangement can be altered based on how we want the date's format to appear.
+            let currentDate = `${day}-${month}-${year}`;
         
             // store User Data 
-            userInfo.name = nameInputRef.current.value;
-            userInfo.phoneNumber = phoneNumber;
-            userInfo.email = emailInputRef.current.value;
-            userInfo.message = messageInputRef.current.value;
+            userInfo["Date"] = currentDate;
+            userInfo.Name = nameInputRef.current.value;
+            userInfo.Phone = phoneNumber;
+            userInfo.Email = emailInputRef.current.value;
+            userInfo.Massage = messageInputRef.current.value;
+
+
+            senUserData(userInfo)
 
 
 
+            let loader = document.querySelector(".requestCallback .theloader")
+            let done = document.querySelector(".requestCallback .submitDone")
+    
+            
+            loader.classList.remove( 'hidden');
+        
+            setTimeout(() => {
+                loader.classList.add("hidden")
+            done.classList.remove("hidden")
+    
+    
             // Reset input fields
             nameInputRef.current.value = '';
-            // phoneNumberRef.current.value = '';
+            setPhoneNumber('');
             emailInputRef.current.value = '';
             messageInputRef.current.value = '';
+    
+            }, 1000)
+    
+            setTimeout(() => {
+            done.classList.add("hidden")
+            }, 1800)
+
+
         
         };
 
@@ -89,7 +139,11 @@ export default function CallBack({isOpen, updateState}) {
                     <textarea  id="message" className="bg-gray-50 border border-gray-300  text-sm rounded-lg focus:shadow-inputFocus focus:border-none focus:outline-none block w-full p-2  "  ref={messageInputRef}  />
                 </div>
 
-                <button type="submit" className="text-white bg-mainBackColor hover:bg-black transition-colors w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl"> Call Me !</button>
+                <button type="submit" className="text-white bg-mainBackColor hover:bg-black transition-colors w-full rounded-lg px-5 py-2.5 text-center mt-5 text-xl flex justify-center items-center"> 
+                        Call Me ! 
+                        <svg className="hidden submitDone ml-2" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.25 8.891l-1.421-1.409-6.105 6.218-3.078-2.937-1.396 1.436 4.5 4.319 7.5-7.627z"/></svg>     
+                        <div className="theloader hidden  ml-2"></div>    
+                </button>
 
             </div>
 

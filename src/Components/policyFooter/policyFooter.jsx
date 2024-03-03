@@ -9,6 +9,7 @@ import footerexpress from "../../assets/footer/american-express.svg"
 import footerpaypal from "../../assets/footer/paypal.svg"
 import footerwestern from "../../assets/footer/western-union.svg"
 import { useRef } from "react";
+import axios from "axios";
 
 
 
@@ -28,17 +29,45 @@ export default function PolicyFooter() {
     const messageInputRef = useRef(null);
 
     
+    async function senUserData(userData) {
+
+        try {
+        let { data } = await axios.post( "https://sheetdb.io/api/v1/unnqcrthpchwd", userData );
+    
+        // catch the error 
+        } catch(err) {
+            // console.log(err.response);
+            
+            alert("something Wrong happened please try again")
+    
+        }
+    
+        }
+    
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        let userInfo = {}
+
+        let userInfo = {};
+
+
+        const date = new Date();
+        let day = date.getDate();
+        let month = date.getMonth() + 1;
+        let year = date.getFullYear();
+
+        // This arrangement can be altered based on how we want the date's format to appear.
+        let currentDate = `${day}-${month}-${year}`;
     
         // store User Data 
-        userInfo.name = nameInputRef.current.value;
-        userInfo.Lname = lastNameRef.current.value;
-        userInfo.phoneNumber = phoneNumberRef.current.value;
-        userInfo.email = emailInputRef.current.value;
-        userInfo.message = messageInputRef.current.value;
+        userInfo["Date"] = currentDate;
+        userInfo.Name = nameInputRef.current.value + " " + lastNameRef.current.value ;
+        userInfo.Phone =  phoneNumberRef.current.value;
+        userInfo.Email = emailInputRef.current.value;
+        userInfo.Massage = messageInputRef.current.value;
+
+
+        senUserData(userInfo)
 
 
         // Reset input fields

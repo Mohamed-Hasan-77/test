@@ -11,13 +11,13 @@ export default function NavAR() {
         <div className="container flex  justify-between">
 
         
-        <div className="logo flex justify-center items-center">
+        <div className="logo flex justify-center items-center cursor-pointer">
             <img id="pageLogo" src={myImage}  alt="logo"/>
         </div>
 
         <div className="navright flex items-center ">
             <div className="btn ml-8">
-                <button className=" position-relative  bg-mainBackColor fw-bold  py-2 px-3  rounded-full outline-none text-white"> حاسبة التكلفة </button>
+                <button className=" position-relative  bg-mainBackColor fw-bold  py-2 px-3  rounded-full outline-none text-white"> <Link to={'/CostCalculatorAR'}> حاسبة التكلفة  </Link></button>
             </div>
 
             <a  href=" https://wa.me/+971557480115" >
